@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+header{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    max-height: 100px;
+    height: 10vh;
+    background-color: #122b43;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.buttons{
+    width: 50vw;
+    display: flex;
+    justify-content: space-around;
+}
+header>span{
+    margin: auto 20px;
+    color: #ffff;
+    font-family: "Poppins",sans-serif;
+    font-weight: 700;
+    font-size: clamp(14px, 2.5vw, 24px);
+}
+.buttons>button{
+    background-color: #122b43;
+    color: #ffff;
+    text-decoration: none;
+    padding: 10px;
+    max-width: 200px;
+    width: 15vw;
+    font-size: clamp(10px, 12px, 24px);
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+.buttons>button:hover{
+    border: 1px solid #fff6f4;
+    background-color: #246A78;
+    padding: 2%;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 0 auto;
+}
+section{
+    font-family: "Montserrat", sans-serif;
+    hyphens: auto;
+}
+.landing{
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    text-align: justify;
+    flex-direction: column;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    z-index: -1;
+}
+.content{
+    font-weight: 500;
+    width: 100%;
+}
+.circle{
+    height: 25vw;
+    width: 25vh;
+    background-color: #b9efed;
+    border-radius: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container>img{
+    height: 100px;
+    justify-content: flex-end;
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.8));
+}
+.divider{
+    background-color: #000;
+    height: 5px;
+    width: 99%;
+    margin: 5px auto;
+}
+
+.bContainer{
+    width: 100vw;
+}
+.who-are-we{
+    box-shadow: 0px 0px  20px rgba(0,0,0,0.2);
+    padding: 10px;
+    text-align: left;
+    width: 49%;
+    max-height: 500px;
+    height: 300px;
+    font-size: clamp(15px, 1rem,2rem);
+    border-radius: 10px;
+}
+section>h2{
+    text-align: center;
+}
+
+.what-we-do{
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+    margin: auto;
+    width: 49%;
+    padding: 10px;
+    height: 300px;
+    font-size: clamp(15px, 1rem,2rem);
+    border-radius: 10px;
+    max-height: 500px;
+}
+.who-are-we,.what-we-do{
+    background-color: #122b43;
+    color: #fff6f4;
+    height: auto;
+    width: 100%;
+    padding: 30px;
+}
+.plans{
+    background-color: #42464d;
+    height: auto;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+}
+
+.text-title{
+    font-size: 1.2rem;
+    font-family: "Montserrat";
+    color: #fff6f4;
+    width: 100%;
+    text-align: center;
+}
+
+.coding, .matematics, .physics {
+    position: relative;
+    width: 48%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all  0.5s ease;
+    margin: auto 20px;
+}
+
+
+.coding img, .matematics img, 
+.coding video, .matematics video,
+.physics video, .physics img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease;
+}
+
+.fondo-video {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.coding:hover, .matematics:hover {
+    box-shadow: 0px 0px 10px #f8efed;
+}
+
+.coding:hover .fondo-video, .matematics:hover .fondo-video {
+    opacity: 1;
+}
+
+.coding:hover img, .matematics:hover img {
+    opacity: 0;
+}
+
+.textPlans {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+    transition: all 1s;
+}
+
+.textPlans > h3 {
+    font-size: clamp(15px, 1.2rem, 2rem);
+}
+
+form > button {
+    border: 1px solid black;
+    padding: 10px;
+    width: 50%;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s;
+}
+
+form > button:hover {
+    background-color: #7266a4;
+    transform: scale(1.05);
+    font-weight: 700;
+}
+
+.coding:hover .textPlans, .matematics:hover .textPlans {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+a{
+    text-decoration: none;
+    color: #ffff;
+}
+
+:target {
+    animation: highlight 1s ease-out;
+  }
+  
+  /* Define the animation keyframes */
+  @keyframes highlight {
+    0% {
+      background-color: transparent;
+      transform: translateY(50px);
+    }
+    100% {
+        background-color: #f7f7f7; /* adjust the color to your liking */
+        transform: translateY(0);
+    }
+  }
+  
+  /* Optional: add a subtle animation to the section title */
+  section:target h2, section:target h3 {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.tuttors{
+    padding: 10px;
+    width: 100%;
+    font-family: "Montserrat",sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.header-tutor{
+    width: 100%;
+    text-align: center;
+}
+.profiles{
+    width: 80%;
+    margin: auto 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sebas {
+    margin: 20px auto;
+}
+.profiles .photo-circle {
+    width: 150px; /* adjust the width and height to your needs */
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profiles .image-container {
+    width: 100%;
+    height: 100%;
+}
+.saul>img{
+    width: 100%;
+}
+.profiles .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.photo-circle{
+    width: 150px;
+    height: 150px;
+    background-color: #edf9c7;
+    border-radius: 50%;
+}
+.mid-divider{
+    width: 100%;
+    background-color: #000;
+    height: 2px;
+    margin-top: 10px;
+}
+.profiles>span{
+    font-size: clamp(10px,1.2em, 2rem);
+    text-align: center;
+}
+.white  {
+    margin: auto;
+    background-color: #ffff;
+}
+.team2023{
+    height: 50vh;
+    width: auto;
+}
+.saulet{
+    width: 80%;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 599px) and (orientation: portrait) {
+    header{
+        flex-direction: column;
+    }
+    .buttons{
+        width: 100vw;
+        justify-content: space-around;
+    }
+    .landing{
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .who-are-we>p{
+        font-size: clamp(8px,11px,20px);
+    }
+    .what-we-do,.who-are-we{
+        width: 100vw;
+        margin: 10px auto;
+        height: auto;
+
+    }
+    .what-we-do>p{
+        font-size: clamp(8px,12px,20px);
+    }
+    .plans{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .coding,.matematics{
+        margin: 20px auto;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+    .team2023{
+        width: 80%;
+        height: 80%;
+        aspect-ratio: 4/3;
+    }
+}
+@media only screen and (max-width: 300px) and (orientation:portrait){
+    .who-are-we{
+        font-size: 15px;
+    }
+    .what-we-do>p{
+        font-size: 11px;
+        height: auto;
+    }
+    .landing{
+        text-align: center;
+    }
+    .team2023{
+        width: 80%;
+        height: 80%;
+    }
+}
+
+/* Media Queries for PC or Laptop Screens */
+
+/* Large Desktop Screens (width >= 1200px) */
+@media only screen and (min-width: 1200px) {
+    /* Add styles here */
+    .who-are-we, .what-we-do {
+        width: 49%;
+        margin: 20px auto;
+    }
+    .plans {
+        padding: 20px;
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .container>img{
+        height: 200px;
+    }
+    .content{
+        font-size: clamp(20px, 1.5rem, 2rem);
+        line-height: 2;
+        height: 70vh;
+        padding: 20px;
+        line-height: 1.5;
+    }
+    .image{
+        height: auto;
+    }
+    .buttons>button{
+        font-size: 20px;
+    }
+    .who-are-we,.what-we-do{
+        font-size: 20px;
+        height: 80vh;
+    }
+    .coding, .matematics {
+        width: 45%;
+        margin: 20px auto;
+        height: 500px;
+    }
+    .profiles .photo-circle {
+        width: 300px; /* adjust the width and height to your needs */
+        height: 300px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    
+    .profiles .image-container {
+        width: 100%;
+        height: 100%;
+    }
+    .profiles{
+        font-size: clamp(20px,1.5rem, 3rem);
+        text-align: left;
+    }
+    .mid-divider{
+        margin: 30px auto;
+    }
+    .saulet{
+        height: 70vh;
+        width: 30vw;
+        aspect-ratio: 4/3;
+    }
+}
+
+/* Medium Desktop Screens (width >= 992px and width < 1200px) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    /* Add styles here */
+    .who-are-we, .what-we-do {
+        width: 49%;
+        margin: 15px auto;
+    }
+    .plans {
+        padding: 15px;
+        flex-wrap: wrap;
+    }
+    .content{
+        font-size: 20px;
+        line-height: 2;
+        height: 70vh;
+        padding: 20px;
+        line-height: 1.5;
+    }
+    .coding, .matematics {
+        width: 48%;
+        margin: 15px auto;
+    }
+    .saulet{
+        height: 70vh;
+        width: 30vw;
+        aspect-ratio: 4/3;
+    }
+}
+
+/* Small Desktop Screens (width >= 768px and width < 992px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* Add styles here */
+    .who-are-we, .what-we-do {
+        width: 50%;
+        margin: 10px auto;
+    }
+    .what-we-do>p,.who-are-we>p{
+        font-size: 13px;
+    }
+    .plans {
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+    .coding, .matematics {
+        width: 50%;
+        margin: 10px auto;
+    }
+    .saulet{
+        height: 70vh;
+        width: 40vw;
+        aspect-ratio: 4/3;
+    }
+}
+
+/* Media Queries for Tablets */
+
+/* Tablet Screens (width >= 768px and width < 992px) in Portrait Orientation */
+@media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+    /* Add styles here */
+    .who-are-we, .what-we-do {
+        width: 80%;
+        margin: 10px auto;
+    }
+    
+    .plans {
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+    .coding, .matematics {
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+
+/* Tablet Screens (width >= 768px and width < 992px) in Landscape Orientation */
+@media only screen and (min-width: 768px) and (max-width: 991px) and (orientation: landscape) {
+    /* Add styles here */
+    .who-are-we, .what-we-do {
+        width: 45%;
+        margin: 10px auto;
+    }
+    .plans {
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+    .coding, .matematics {
+        width: 45%;
+        margin: 10px auto;
+    }
+}
+
+/* Small Tablet Screens (width >= 600px and width < 768px) in Portrait Orientation */
+@media only screen and (min-width: 600px) and (max-width: 767px) and (orientation: portrait) {
+    /* Add styles here */
+    .who-are-we, .what-we-do {
+        width: 100%;
+        margin: 10px auto;
+    }
+    .plans {
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+    .coding, .matematics {
+        width: 90%;
+        margin: 10px auto;
+    }
+}
+
+/* Small Tablet Screens (width >= 600px and width < 768px) in Landscape Orientation */
+@media only screen and (min-width: 600px) and (max-width: 767px) and (orientation: landscape) {
+    /* Add styles here */
+    .who-are-we, .what-we-do {
+        width: 100%;
+        margin: 10px auto;
+    }
+    .plans {
+        padding: 10px;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    .coding, .matematics {
+        width: 50%;
+        margin: 10px auto;
+    }
+    
+}
+
+/* Media Queries */
